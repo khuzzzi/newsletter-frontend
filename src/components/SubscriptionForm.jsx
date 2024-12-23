@@ -19,7 +19,7 @@ export function SubscriptionForm() {
       e.preventDefault();
       console.log('Subscribed:', email);
 
-      const response = await axios.post('https://newsletter-frontend-zeta.vercel.app/subscribe', { email },{headers: {'Content-Type': 'application/json'}});
+      const response = await axios.post('https://newsletter-backend-pi.vercel.app/subscribe', { email },{headers: {'Content-Type': 'application/json'}});
       console.log(response)
       if (response.data.success === true) {
         setShowOtpForm(true);  // Show OTP form after successful subscription
@@ -31,7 +31,7 @@ export function SubscriptionForm() {
 
   const verifyOtp = async () => {
     try {
-      const response = await axios.post('https://newsletter-frontend-zeta.vercel.app/verify', {
+      const response = await axios.post('https://newsletter-backend-pi.vercel.app/verify', {
         email,
         otp: value, // The OTP entered by the user
       });
