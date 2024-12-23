@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #0C041F 0%, #110430 50%, #15033D 100%);
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, #0F032B 0%, #330A91 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input-gradient {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.subscribe-gradient {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
